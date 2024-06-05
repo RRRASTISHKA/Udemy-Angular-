@@ -67,4 +67,10 @@ public async getUserLocation():Promise<[number,number]>{
 
 
 
+ deletePlaces(){
+  this.places=[]
+ }
+
+
+
 }

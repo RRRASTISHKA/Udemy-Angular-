@@ -30,4 +30,12 @@ export class SearchResultsComponent {
     this.mapService.flyTo([lng, lat]);
   }
 
+
+ getDirections(place:Feature){
+  this.placesService.deletePlaces();
+  const start=this.placesService.userLocation as [number,number];
+  const end = place.geometry.coordinates as [number,number];
+  this.mapService.getRouteBetweenPoints(start,end)
+ }
+
 }

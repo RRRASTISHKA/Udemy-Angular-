@@ -8,11 +8,11 @@ class="alert alert-primary mt-2 text-center">
 <ul class="list-group mt-2" *ngIf="places.length>0">
 
 
-    <li *ngFor="let place of places" class="list-group-item list-group-item-action pointer">
+    <li (click)="flyTo(place)" *ngFor="let place of places" class="list-group-item list-group-item-action pointer">
       <h6>{{place.properties.context.place.name}}</h6>
       <p>{{place.properties.context.region.name}}</p>
 
-      <button (click)="flyTo(place)" class="btn btn-sm btn-outline-primary">
+      <button (click)="getDirections(place)"  class="btn btn-sm btn-outline-primary">
         Direcciones
       </button>
 
